@@ -8,7 +8,7 @@ Built with [karabiner.ts](https://github.com/evan-liu/karabiner.ts) - see [docs]
 
 ### Layers
 
-Layers are activated using duoLayer mechanics: hold both activation keys, release one, then press the mapped keys.
+Layers are activated using duoLayer mechanics: hold both activation keys, (optionally) release one, then press one or more mapped keys.
 
 - **Symbol Mode**: Hold Z+S, release one, then press keys to paste modifier symbols and special keys:
   - 1-5: ⌘, ⌥, ⌃, ⇧, ⇪ (modifier symbols)

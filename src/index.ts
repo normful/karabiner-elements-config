@@ -15,9 +15,11 @@ import {
 } from "karabiner.ts";
 
 // Example of how to activate:
-// 1. Hold both z and s
-// 2. Let go of one of the two activation keys
-// 3. While still holding an activation key: Press 1 to output ⌘
+// 1. Hold both z and s, until the layer activation notification appears
+// 2. (Optional) Let go of one of the two activation keys
+// 3. While still holding an activation key:
+//    Press 1 to output ⌘
+//    Press more mapped keys to output more symbols
 function layer_symbol_mode() {
   return duoLayer("z", "s")
     .notification()
@@ -32,9 +34,11 @@ function layer_symbol_mode() {
 }
 
 // Example of how to activate:
-// 1. Hold both z and e
-// 2. Let go of one of the two activation keys
-// 3. While still holding an activation key: Press h to output 😊
+// 1. Hold both z and e, until the layer activation notification appears
+// 2. (Optional) Let go of one of the two activation keys
+// 3. While still holding an activation key:
+//    Press h to output 😊
+//    Press more mapped keys to output more emojis
 function layer_emoji_mode() {
   return duoLayer("z", "e")
     .notification()
@@ -78,9 +82,11 @@ function layer_emoji_mode() {
 }
 
 // Example of how to activate:
-// 1. Hold both z and m
-// 2. Let go of one of the two activation keys
-// 3. While still holding an activation key: Press q to output ∑
+// 1. Hold both z and m, until the layer activation notification appears
+// 2. (Optional) Let go of one of the two activation keys
+// 3. While still holding an activation key:
+//    Press q to output ∑
+//    Press more mapped keys to output more symbols
 function layer_math_mode() {
   return duoLayer("z", "m")
     .notification()
