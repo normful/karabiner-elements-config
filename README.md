@@ -25,8 +25,4 @@ Built with [karabiner.ts](https://github.com/evan-liu/karabiner.ts) - see [docs]
 bun run build
 ```
 
-This generates the Karabiner config file.
-
-## Import
-
-Import the generated config into Karabiner Elements via the GUI.
+This installs the into Karabiner Elements. You don't need to click anything in Karabiner Elements.
