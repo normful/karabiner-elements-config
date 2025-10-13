@@ -6,7 +6,7 @@
     "update": "bun update karabiner.ts"
   },
   "devDependencies": {
-    "@types/node": "^20",
+    "@types/node": "^20.19.21",
     "karabiner.ts": "^1.35.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
