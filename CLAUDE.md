@@ -21,7 +21,7 @@ The config includes several layers and rules:
 
 ## Building
 
-Run `npm run build` to generate the Karabiner config.
+Run `bun run build` to generate the Karabiner config.
 
 ## Usage
 
