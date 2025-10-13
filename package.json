@@ -3,11 +3,11 @@
   "description": "My Karabiner Elements config",
   "scripts": {
     "build": "tsx src/index.ts",
-    "update": "npm update karabiner.ts"
+    "update": "bun update karabiner.ts"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "karabiner.ts": "latest",
+    "karabiner.ts": "^1.35.1",
     "tsx": "^4",
     "typescript": "^5"
   }

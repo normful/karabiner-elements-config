@@ -5,7 +5,7 @@
       "name": "karabiner-config",
       "devDependencies": {
         "@types/node": "^20",
-        "karabiner.ts": "latest",
+        "karabiner.ts": "^1.35.1",
         "tsx": "^4",
         "typescript": "^5",
       },
