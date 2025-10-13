@@ -1,6 +1,6 @@
 {
-  "name": "karabiner-config",
-  "description": "karabiner config in karabiner.ts",
+  "name": "karabiner-elements-config",
+  "description": "My Karabiner Elements config",
   "scripts": {
     "build": "tsx src/index.ts",
     "update": "npm update karabiner.ts"
