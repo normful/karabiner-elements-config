@@ -1,28 +1,17 @@
 # Karabiner Elements Config
 
-This is a personal configuration for Karabiner Elements, a powerful and stable keyboard customizer for macOS.
-
-## Project Structure
-
-- `src/index.ts`: Main configuration file written in TypeScript using the karabiner.ts library.
-- `package.json`: Project dependencies and scripts.
-- `.gitignore`: Ignores node_modules.
+Personal Karabiner Elements config for macOS keyboard customization using karabiner.ts.
 
 ## Features
 
-The config includes several layers and rules:
+- **Symbol Mode**: DuoLayer Z+S - paste modifier symbols and special keys
+- **Emoji Mode**: DuoLayer Z+E - paste emojis
+- **Math Mode**: DuoLayer Z+M - paste Greek letters, math symbols, superscripts
+- **App Shortcuts**: Cmd+` (Finder), Cmd+1-4 (WezTerm, Vivaldi, Notion, Jan)
+- **Language Toggle**: Right Option toggles JA/EN on MacBook and Yunzii B68 keyboards
+- **Media Keys**: Custom brightness/volume mappings on specific keyboards
+- **Misc**: Escape sends Japanese Eisuu, Cmd+Shift+N opens new Vivaldi tab
 
-- **Symbol Mode**: Activated by pressing '/', allows pasting modifier symbols.
-- **Emoji Mode**: Activated by ';', maps keys to emojis.
-- **Math Mode**: Activated by ''', maps keys to Greek letters and math symbols.
-- **App Activation**: Cmd + number keys to activate frequent apps.
-- **Language Toggle**: For specific keyboards, toggles between Japanese and English input.
-- **Media Keys**: Custom media key mappings for certain keyboards.
+## Build
 
-## Building
-
-Run `bun run build` to generate the Karabiner config.
-
-## Usage
-
-After building, the generated config can be imported into Karabiner Elements.
+`bun run build`
