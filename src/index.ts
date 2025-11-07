@@ -222,11 +222,14 @@ const ifYunziiB68InBluetoothMode: ConditionBuilder = ifDevice({
   is_keyboard: true,
 });
 
-function yunzii_b68_bluetooth_Del_toggles_en_ja() {
-  return rule(
-    "YUNZII B68 BT: Right Option (Del) Language Toggle",
-    ifYunziiB68InBluetoothMode,
-  ).manipulators([
+const ifYunziiB68In24GMode: ConditionBuilder = ifDevice({
+  vendor_id: 13652,
+  product_id: 64009,
+  is_keyboard: true,
+});
+
+function right_option_toggles_en_ja(condition: ConditionBuilder) {
+  return rule("Right Option (Delete) Language Toggle", condition).manipulators([
     map("right_option", "?any")
       .condition(ifInputSource({ language: "^ja$" }))
       .toIfAlone(toInputSource({ language: "en" })),
@@ -236,9 +239,9 @@ function yunzii_b68_bluetooth_Del_toggles_en_ja() {
   ]);
 }
 
-function yunzii_b68_bluetooth_PgUp_sends_media_keys() {
-  return layer("page_up", "yunzii-media")
-    .condition(ifYunziiB68InBluetoothMode)
+function page_up_sends_media_keys(condition: ConditionBuilder) {
+  return layer("page_up", "pgu-layer-var")
+    .condition(condition)
     .manipulators([
       map("1").to("display_brightness_decrement"),
       map("2").to("display_brightness_increment"),
@@ -262,8 +265,11 @@ writeToProfile(
     macbook_keyboard_RightOption_toggles_ja_en(),
     macbook_keyboard_RightOption_and_RightShift_media_keys(),
 
-    yunzii_b68_bluetooth_Del_toggles_en_ja(),
-    yunzii_b68_bluetooth_PgUp_sends_media_keys(),
+    right_option_toggles_en_ja(ifYunziiB68In24GMode),
+    right_option_toggles_en_ja(ifYunziiB68InBluetoothMode),
+
+    page_up_sends_media_keys(ifYunziiB68In24GMode),
+    page_up_sends_media_keys(ifYunziiB68InBluetoothMode),
   ],
   {
     "duo_layer.delay_milliseconds": 150,

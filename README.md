@@ -49,7 +49,7 @@ Layers are activated using duoLayer mechanics: hold both activation keys, (optio
   - F11: Decrease volume
   - F12: Increase volume
 
-#### Yunzii B68 Bluetooth Keyboard (Vendor ID: 13652, Product ID: 64007)
+#### Yunzii B68 Keyboard (Vendor ID: 13652, Product IDs: 64007 and 64009)
 
 - **Right Option Language Toggle**: Right Option (Del key) toggles between English and Japanese input sources.
 - **Media Keys Layer**: Hold Page Up to activate media layer:
