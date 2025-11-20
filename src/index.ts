@@ -166,10 +166,10 @@ function activate_frequent_apps() {
       to$("osascript -e 'tell application \"WezTerm\" to activate'"),
     ),
     map(2, "⌘").to(
-      to$("osascript -e 'tell application \"Ghostty\" to activate'"),
+      to$("osascript -e 'tell application \"kitty\" to activate'"),
     ),
     map(3, "⌘").to(
-      to$("osascript -e 'tell application \"kitty\" to activate'"),
+      to$("osascript -e 'tell application \"Ghostty\" to activate'"),
     ),
     map(4, "⌘").to(
       to$("osascript -e 'tell application \"Vivaldi\" to activate'"),
