@@ -1,11 +1,12 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "karabiner-config",
       "devDependencies": {
         "@types/node": "^20.19.21",
-        "karabiner.ts": "^1.35.1",
+        "karabiner.ts": "^1.36.0",
         "tsx": "^4.20.6",
         "typescript": "^5.9.3",
       },
@@ -72,7 +73,7 @@
 
     "get-tsconfig": ["get-tsconfig@4.12.0", "", { "dependencies": { "resolve-pkg-maps": "^1.0.0" } }, "sha512-LScr2aNr2FbjAjZh2C6X6BxRx1/x+aTDExct/xyq2XKbYOiG5c0aK7pMsSuyc0brz3ibr/lbQiHD9jzt4lccJw=="],
 
-    "karabiner.ts": ["karabiner.ts@1.35.1", "", {}, "sha512-ndykub6ifouFN6Mz4C6e6VWtCH70rBFmts7ci1QPWXUBOnbBV+aWUPKUcwttHxaLOdGCDlsBsqTSkMKVSUVmMA=="],
+    "karabiner.ts": ["karabiner.ts@1.36.0", "", {}, "sha512-iXg3/yZ46XodUXu2+TrIkrtbR71UFXR1dhDwpF8R6vCgd5i2r2+H7evfwQZM970oPd04PWdJk5AhvJY/582M7Q=="],
 
     "resolve-pkg-maps": ["resolve-pkg-maps@1.0.0", "", {}, "sha512-seS2Tj26TBVOC2NIc2rOe2y2ZO7efxITtLZcGSOnHHNOQ7CkiUBfw0Iw2ck6xkIhPwLhKNLS8BO+hEpngQlqzw=="],
 
