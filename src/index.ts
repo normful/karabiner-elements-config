@@ -6,6 +6,7 @@ import {
   layer,
   duoLayer,
   map,
+  mapPointingButton,
   rule,
   to$,
   toInputSource,
@@ -245,6 +246,18 @@ function right_option_toggles_en_ja(condition: ConditionBuilder) {
   ]);
 }
 
+const ifRazerBasiliskMouse: ConditionBuilder = ifDevice({
+  vendor_id: 5426,
+  product_id: 131,
+  is_pointing_device: true,
+});
+
+function mouse_button3_sends_option_z() {
+  return rule("Mouse Button 3 → Option+Z", ifRazerBasiliskMouse).manipulators([
+    mapPointingButton("button3").to("z", "⌥"),
+  ]);
+}
+
 function page_up_sends_media_keys(condition: ConditionBuilder) {
   return layer("page_up", "pgu-layer-var")
     .condition(condition)
@@ -276,6 +289,8 @@ writeToProfile(
 
     page_up_sends_media_keys(ifYunziiB68In24GMode),
     page_up_sends_media_keys(ifYunziiB68InBluetoothMode),
+
+  mouse_button3_sends_option_z(),
   ],
   {
     "duo_layer.delay_milliseconds": 150,
