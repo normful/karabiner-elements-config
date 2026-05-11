@@ -245,7 +245,7 @@ const ifRazerBasiliskMouse: ConditionBuilder = ifDevice({
   is_pointing_device: true,
 });
 
-function mouse_button3_sends_option_z_to_toggle_mic(condition: ConditionBuilder) {
+function pressing_mouse_wheel_sends_option_z(condition: ConditionBuilder) {
   return rule("Mouse Button 3 → Option+Z", condition).manipulators([
     mapPointingButton("button3").to("z", "⌥"),
   ]);
@@ -283,7 +283,7 @@ writeToProfile(
     page_up_and_manipulator_sends_media_key(ifYunziiB68In24GMode),
     page_up_and_manipulator_sends_media_key(ifYunziiB68InBluetoothMode),
 
-    mouse_button3_sends_option_z_to_toggle_mic(ifRazerBasiliskMouse),
+    pressing_mouse_wheel_sends_option_z(ifRazerBasiliskMouse),
   ],
   {
     "duo_layer.delay_milliseconds": 150,
