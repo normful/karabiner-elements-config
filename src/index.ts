@@ -236,6 +236,12 @@ function pressing_mouse_wheel_sends_option_z(condition: ConditionBuilder) {
   ]);
 }
 
+function pressing_mouse_button_4_sends_enter(condition: ConditionBuilder) {
+  return rule("Mouse Button 4 → Return", condition).manipulators([
+    mapPointingButton("button4").to("return_or_enter"),
+  ]);
+}
+
 function page_up_and_manipulator_sends_media_key(condition: ConditionBuilder) {
   return layer("page_up", "pgu-layer-var")
     .condition(condition)
@@ -271,6 +277,7 @@ writeToProfile(
     page_up_and_manipulator_sends_media_key(ifYunziiB68InBluetoothMode),
 
     pressing_mouse_wheel_sends_option_z(ifRazerBasiliskMouse),
+    pressing_mouse_button_4_sends_enter(ifRazerBasiliskMouse),
   ],
   {
     "duo_layer.delay_milliseconds": 150,
