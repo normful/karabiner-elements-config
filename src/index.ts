@@ -199,7 +199,7 @@ function right_option_toggles_en_ja_with_held_down_pass_through(condition: Condi
   ]);
 }
 
-function macbook_keyboard_RightOption_and_RightShift_media_keys(condition: ConditionBuilder) {
+function holding_right_option_and_right_shift_with_fn_keys_sends_media_controls(condition: ConditionBuilder) {
   return rule(
     "Builtin MacBook Keyboard: Right Option + Right Shift + specific Fn keys send specific Media Keys",
     condition,
@@ -275,7 +275,7 @@ writeToProfile(
     activate_frequent_apps(),
 
     right_option_toggles_en_ja_with_held_down_pass_through(ifBuiltinMacbookKeyboard),
-    macbook_keyboard_RightOption_and_RightShift_media_keys(ifBuiltinMacbookKeyboard),
+    holding_right_option_and_right_shift_with_fn_keys_sends_media_controls(ifBuiltinMacbookKeyboard),
 
     right_option_toggles_en_ja(ifYunziiB68In24GMode),
     right_option_toggles_en_ja(ifYunziiB68InBluetoothMode),
