@@ -58,6 +58,12 @@ Layers are activated using duoLayer mechanics: hold both activation keys, (optio
   - -: Decrease volume
   - =: Increase volume
 
+### Mouse-Specific Rules
+
+#### Razer Basilisk X HyperSpeed (Vendor ID: 5426, Product ID: 131)
+
+- **Mouse Wheel Button → Option+Z**: Pressing mouse button 3 sends Option+Z (used for toggling microphone transcription).
+
 ## Setup
 
 1. Install [Karabiner Elements](https://karabiner-elements.pqrs.org/).
