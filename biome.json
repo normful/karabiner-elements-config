@@ -11,7 +11,10 @@
       "quoteStyle": "double"
     }
   },
+  "files": {
+    "includes": ["src/**/*.ts"]
+  },
   "linter": {
-    "enabled": false
+    "enabled": true
   }
 }
