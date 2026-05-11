@@ -4,6 +4,8 @@
   "scripts": {
     "install-config": "tsx src/index.ts",
     "format": "biome format --write src/",
+    "check": "biome check src/",
+    "lint": "biome lint src/",
     "update": "bun update karabiner.ts"
   },
   "devDependencies": {
