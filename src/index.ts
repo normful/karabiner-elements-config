@@ -283,7 +283,7 @@ writeToProfile(
     page_up_sends_media_keys(ifYunziiB68In24GMode),
     page_up_sends_media_keys(ifYunziiB68InBluetoothMode),
 
-  mouse_button3_sends_option_z(ifRazerBasiliskMouse),
+    mouse_button3_sends_option_z(ifRazerBasiliskMouse),
   ],
   {
     "duo_layer.delay_milliseconds": 150,
