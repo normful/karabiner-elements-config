@@ -181,10 +181,10 @@ const ifBuiltinMacbookKeyboard: ConditionBuilder = ifDevice({
   is_keyboard: true,
 });
 
-function macbook_keyboard_RightOption_toggles_ja_en() {
+function macbook_keyboard_RightOption_toggles_ja_en(condition: ConditionBuilder) {
   return rule(
     "Builtin MacBook Keyboard: Right Option Language Toggle",
-    ifBuiltinMacbookKeyboard,
+    condition,
   ).manipulators([
     map("right_option", "?any")
       .condition(ifInputSource({ language: "^ja$" }))
@@ -199,10 +199,10 @@ function macbook_keyboard_RightOption_toggles_ja_en() {
   ]);
 }
 
-function macbook_keyboard_RightOption_and_RightShift_media_keys() {
+function macbook_keyboard_RightOption_and_RightShift_media_keys(condition: ConditionBuilder) {
   return rule(
     "Builtin MacBook Keyboard: Right Option + Right Shift + specific Fn keys send specific Media Keys",
-    ifBuiltinMacbookKeyboard,
+    condition,
   ).manipulators([
     map("f1", ["right_option", "right_shift"]).to(
       "display_brightness_decrement",
@@ -274,8 +274,8 @@ writeToProfile(
     cmd_shift_n_opens_new_vivaldi_tab(),
     activate_frequent_apps(),
 
-    macbook_keyboard_RightOption_toggles_ja_en(),
-    macbook_keyboard_RightOption_and_RightShift_media_keys(),
+    macbook_keyboard_RightOption_toggles_ja_en(ifBuiltinMacbookKeyboard),
+    macbook_keyboard_RightOption_and_RightShift_media_keys(ifBuiltinMacbookKeyboard),
 
     right_option_toggles_en_ja(ifYunziiB68In24GMode),
     right_option_toggles_en_ja(ifYunziiB68InBluetoothMode),
