@@ -3,6 +3,7 @@
   "description": "My Karabiner Elements config",
   "scripts": {
     "install-config": "tsx src/index.ts",
+    "format": "biome format --write src/",
     "update": "bun update karabiner.ts"
   },
   "devDependencies": {

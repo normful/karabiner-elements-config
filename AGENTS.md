@@ -7,10 +7,11 @@ Personal Karabiner Elements config for macOS keyboard customization using `karab
 - `src/index.ts` — the entire configuration
 - `package.json` — dependencies and scripts
 
-## Build / Install
+## Scripts
 
 ```bash
-bun run install-config
+bun run install-config   # generate and install Karabiner config
+bun run format           # format source with Biome
 ```
 
 ## Project conventions
