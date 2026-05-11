@@ -32,10 +32,9 @@ Layers are activated using duoLayer mechanics: hold both activation keys, (optio
 
 - **Focus Frequent Apps**:
   - Cmd+`: Activate Finder
-  - Cmd+1: Activate WezTerm
+  - Cmd+1: Activate Ghostty
   - Cmd+2: Activate Vivaldi
   - Cmd+3: Activate Notion
-  - Cmd+4: Activate Jan
 
 ### Keyboard-Specific Rules
 

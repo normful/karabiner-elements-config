@@ -164,21 +164,14 @@ function activate_frequent_apps() {
       to$("osascript -e 'tell application \"Finder\" to activate'"),
     ),
     map(1, "⌘").to(
-      to$("osascript -e 'tell application \"WezTerm\" to activate'"),
-    ),
-    map(2, "⌘").to(
-      to$("osascript -e 'tell application \"kitty\" to activate'"),
-    ),
-    map(3, "⌘").to(
       to$("osascript -e 'tell application \"Ghostty\" to activate'"),
     ),
-    map(4, "⌘").to(
+    map(2, "⌘").to(
       to$("osascript -e 'tell application \"Vivaldi\" to activate'"),
     ),
-    map(5, "⌘").to(
+    map(3, "⌘").to(
       to$("osascript -e 'tell application \"Notion\" to activate'"),
     ),
-    map(6, "⌘").to(to$("osascript -e 'tell application \"Jan\" to activate'")),
   ]);
 }
 
