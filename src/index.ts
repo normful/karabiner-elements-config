@@ -251,7 +251,7 @@ function mouse_button3_sends_option_z_to_toggle_mic(condition: ConditionBuilder)
   ]);
 }
 
-function page_up_sends_media_keys(condition: ConditionBuilder) {
+function page_up_and_manipulator_sends_media_key(condition: ConditionBuilder) {
   return layer("page_up", "pgu-layer-var")
     .condition(condition)
     .manipulators([
@@ -280,8 +280,8 @@ writeToProfile(
     right_option_toggles_en_ja(ifYunziiB68In24GMode),
     right_option_toggles_en_ja(ifYunziiB68InBluetoothMode),
 
-    page_up_sends_media_keys(ifYunziiB68In24GMode),
-    page_up_sends_media_keys(ifYunziiB68InBluetoothMode),
+    page_up_and_manipulator_sends_media_key(ifYunziiB68In24GMode),
+    page_up_and_manipulator_sends_media_key(ifYunziiB68InBluetoothMode),
 
     mouse_button3_sends_option_z_to_toggle_mic(ifRazerBasiliskMouse),
   ],
