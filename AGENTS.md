@@ -1,17 +1,20 @@
-# Karabiner Elements Config
+# Karabiner Elements Config — Coding Assistant Instructions
 
-Personal Karabiner Elements config for macOS keyboard customization using karabiner.ts.
+Personal Karabiner Elements config for macOS keyboard customization using `karabiner.ts`.
 
-## Features
+## Source of truth
 
-- **Symbol Mode**: DuoLayer Z+S - paste modifier symbols and special keys
-- **Emoji Mode**: DuoLayer Z+E - paste emojis
-- **Math Mode**: DuoLayer Z+M - paste Greek letters, math symbols, superscripts
-- **App Shortcuts**: Cmd+` (Finder), Cmd+1-4 (WezTerm, Vivaldi, Notion, Jan)
-- **Language Toggle**: Right Option toggles JA/EN on MacBook and Yunzii B68 keyboards
-- **Media Keys**: Custom brightness/volume mappings on specific keyboards
-- **Misc**: Escape sends Japanese Eisuu, Cmd+Shift+N opens new Vivaldi tab
+- `src/index.ts` — the entire configuration
+- `package.json` — dependencies and scripts
 
-## Install Config
+## Build / Install
 
-`bun run install-config`
+```bash
+bun run install-config
+```
+
+## Project conventions
+
+- Uses [karabiner.ts](https://karabiner.ts.evanliu.dev) to generate `~/.config/karabiner/karabiner.json`
+- All rules are defined as functions in `src/index.ts` and passed to `writeToProfile("Default profile", [...])`
+- Device-specific rules use `ifDevice()` conditions with vendor/product IDs from Karabiner Elements Devices tab
