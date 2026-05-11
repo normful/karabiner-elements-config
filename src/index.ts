@@ -25,12 +25,8 @@ function layer_symbol_mode() {
   return duoLayer("z", "s")
     .notification()
     .manipulators([
-      withMapper(["⌘", "⌥", "⌃", "⇧", "⇪"])((k, i) =>
-        map((i + 1) as NumberKeyValue).toPaste(k),
-      ),
-      withMapper(["←", "→", "↑", "↓", "␣", "⏎", "⇥", "⎋", "⌫", "⌦", "⇪"])((k) =>
-        map(k).toPaste(k),
-      ),
+      withMapper(["⌘", "⌥", "⌃", "⇧", "⇪"])((k, i) => map((i + 1) as NumberKeyValue).toPaste(k)),
+      withMapper(["←", "→", "↑", "↓", "␣", "⏎", "⇥", "⎋", "⌫", "⌦", "⇪"])((k) => map(k).toPaste(k)),
     ]);
 }
 
@@ -163,15 +159,9 @@ function activate_frequent_apps() {
     map("grave_accent_and_tilde", "⌘").to(
       to$("osascript -e 'tell application \"Finder\" to activate'"),
     ),
-    map(1, "⌘").to(
-      to$("osascript -e 'tell application \"Ghostty\" to activate'"),
-    ),
-    map(2, "⌘").to(
-      to$("osascript -e 'tell application \"Vivaldi\" to activate'"),
-    ),
-    map(3, "⌘").to(
-      to$("osascript -e 'tell application \"Notion\" to activate'"),
-    ),
+    map(1, "⌘").to(to$("osascript -e 'tell application \"Ghostty\" to activate'")),
+    map(2, "⌘").to(to$("osascript -e 'tell application \"Vivaldi\" to activate'")),
+    map(3, "⌘").to(to$("osascript -e 'tell application \"Notion\" to activate'")),
   ]);
 }
 
@@ -182,10 +172,7 @@ const ifBuiltinMacbookKeyboard: ConditionBuilder = ifDevice({
 });
 
 function right_option_toggles_en_ja_with_held_down_pass_through(condition: ConditionBuilder) {
-  return rule(
-    "Builtin MacBook Keyboard: Right Option Language Toggle",
-    condition,
-  ).manipulators([
+  return rule("Builtin MacBook Keyboard: Right Option Language Toggle", condition).manipulators([
     map("right_option", "?any")
       .condition(ifInputSource({ language: "^ja$" }))
       .toIfAlone(toInputSource({ language: "en" }))
@@ -199,17 +186,15 @@ function right_option_toggles_en_ja_with_held_down_pass_through(condition: Condi
   ]);
 }
 
-function right_option_plus_right_shift_modifies_fn_one_through_twelve_to_brightness_and_volume_media_keys(condition: ConditionBuilder) {
+function right_option_plus_right_shift_modifies_fn_one_through_twelve_to_brightness_and_volume_media_keys(
+  condition: ConditionBuilder,
+) {
   return rule(
     "Builtin MacBook Keyboard: Right Option + Right Shift + specific Fn keys send specific Media Keys",
     condition,
   ).manipulators([
-    map("f1", ["right_option", "right_shift"]).to(
-      "display_brightness_decrement",
-    ),
-    map("f2", ["right_option", "right_shift"]).to(
-      "display_brightness_increment",
-    ),
+    map("f1", ["right_option", "right_shift"]).to("display_brightness_decrement"),
+    map("f2", ["right_option", "right_shift"]).to("display_brightness_increment"),
     map("f10", ["right_option", "right_shift"]).to("mute"),
     map("f11", ["right_option", "right_shift"]).to("volume_decrement"),
     map("f12", ["right_option", "right_shift"]).to("volume_increment"),
@@ -275,7 +260,9 @@ writeToProfile(
     activate_frequent_apps(),
 
     right_option_toggles_en_ja_with_held_down_pass_through(ifBuiltinMacbookKeyboard),
-    right_option_plus_right_shift_modifies_fn_one_through_twelve_to_brightness_and_volume_media_keys(ifBuiltinMacbookKeyboard),
+    right_option_plus_right_shift_modifies_fn_one_through_twelve_to_brightness_and_volume_media_keys(
+      ifBuiltinMacbookKeyboard,
+    ),
 
     right_option_toggles_en_ja(ifYunziiB68In24GMode),
     right_option_toggles_en_ja(ifYunziiB68InBluetoothMode),

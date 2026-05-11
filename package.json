@@ -6,6 +6,7 @@
     "update": "bun update karabiner.ts"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.4.15",
     "@types/node": "^20.19.21",
     "karabiner.ts": "^1.36.0",
     "tsx": "^4.20.6",
