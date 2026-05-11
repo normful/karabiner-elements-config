@@ -181,7 +181,7 @@ const ifBuiltinMacbookKeyboard: ConditionBuilder = ifDevice({
   is_keyboard: true,
 });
 
-function macbook_keyboard_RightOption_toggles_ja_en(condition: ConditionBuilder) {
+function right_option_toggles_en_ja_with_held_down_pass_through(condition: ConditionBuilder) {
   return rule(
     "Builtin MacBook Keyboard: Right Option Language Toggle",
     condition,
@@ -274,7 +274,7 @@ writeToProfile(
     cmd_shift_n_opens_new_vivaldi_tab(),
     activate_frequent_apps(),
 
-    macbook_keyboard_RightOption_toggles_ja_en(ifBuiltinMacbookKeyboard),
+    right_option_toggles_en_ja_with_held_down_pass_through(ifBuiltinMacbookKeyboard),
     macbook_keyboard_RightOption_and_RightShift_media_keys(ifBuiltinMacbookKeyboard),
 
     right_option_toggles_en_ja(ifYunziiB68In24GMode),
