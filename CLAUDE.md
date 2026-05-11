@@ -12,6 +12,6 @@ Personal Karabiner Elements config for macOS keyboard customization using karabi
 - **Media Keys**: Custom brightness/volume mappings on specific keyboards
 - **Misc**: Escape sends Japanese Eisuu, Cmd+Shift+N opens new Vivaldi tab
 
-## Build
+## Install Config
 
-`bun run build`
+`bun run install-config`

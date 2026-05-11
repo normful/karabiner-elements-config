@@ -65,10 +65,10 @@ Layers are activated using duoLayer mechanics: hold both activation keys, (optio
 2. Clone this repo.
 3. Run `bun install`.
 
-## Build
+## Install Config
 
 ```bash
-bun run build
+bun run install-config
 ```
 
 This installs the config into Karabiner Elements. You don't need to click anything in Karabiner Elements.

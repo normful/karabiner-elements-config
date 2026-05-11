@@ -2,7 +2,7 @@
   "name": "karabiner-elements-config",
   "description": "My Karabiner Elements config",
   "scripts": {
-    "build": "tsx src/index.ts",
+    "install-config": "tsx src/index.ts",
     "update": "bun update karabiner.ts"
   },
   "devDependencies": {
