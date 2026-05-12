@@ -242,6 +242,21 @@ function pressing_mouse_button_4_sends_enter(condition: ConditionBuilder) {
   ]);
 }
 
+function pressing_mouse_button_5_sends_replant(condition: ConditionBuilder) {
+  return rule("Mouse Button 5 → /replant<ENTER>", condition).manipulators([
+    mapPointingButton("button5").to$(`osascript -e '
+set prev to the clipboard
+set the clipboard to "/replant"
+tell application "System Events"
+  keystroke "v" using command down
+  delay 0.05
+  keystroke return
+delay 0.05
+end tell
+set the clipboard to prev'`),
+  ]);
+}
+
 function page_up_and_manipulator_sends_media_key(condition: ConditionBuilder) {
   return layer("page_up", "pgu-layer-var")
     .condition(condition)
@@ -278,6 +293,7 @@ writeToProfile(
 
     pressing_mouse_wheel_sends_option_z(ifRazerBasiliskMouse),
     pressing_mouse_button_4_sends_enter(ifRazerBasiliskMouse),
+    pressing_mouse_button_5_sends_replant(ifRazerBasiliskMouse),
   ],
   {
     "duo_layer.delay_milliseconds": 150,
